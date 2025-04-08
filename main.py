@@ -61,10 +61,6 @@ def main():
 
         pygame.display.flip()
         screen.fill("black") 
-    #does nothing?
-    print("Starting Asteroids!")
-    print("Screen width:", constants.SCREEN_WIDTH)
-    print("Screen height:", constants.SCREEN_HEIGHT)
 
     #what does this do?
 if __name__ == "__main__":

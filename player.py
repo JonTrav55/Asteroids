@@ -21,8 +21,6 @@ class Player(CircleShape):
             new_shot = Shot(self.position.x, self.position.y, SHOT_RADIUS, self.rotation)
             new_shot.velocity = pygame.Vector2(0, 1).rotate(self.rotation) * PLAYER_SHOT_SPEED
             self.shots_group.add(new_shot)
-            print(f"Shot created! Position: {new_shot.position}, Velocity: {new_shot.velocity}")
-            print(f"Total shots: {len(self.shots_group)}")
             self.weapon_cooldown = PLAYER_SHOOT_COOLDOWN
 
     def update(self, dt):
