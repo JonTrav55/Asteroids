@@ -49,9 +49,18 @@ def main():
                 print("Game over!")
                 sys.exit()
 
-        pygame.display.flip()
-        screen.fill("black")
+        for asteroid in drawable:
+            if isinstance(asteroid, Asteroid):
+                for bullet in shots_group:
+                    if asteroid.collides_with(bullet):
+                        print("Asteroid hit!")
+                        bullet.kill()
+                        asteroid.split()
+                        
 
+
+        pygame.display.flip()
+        screen.fill("black") 
     #does nothing?
     print("Starting Asteroids!")
     print("Screen width:", constants.SCREEN_WIDTH)
